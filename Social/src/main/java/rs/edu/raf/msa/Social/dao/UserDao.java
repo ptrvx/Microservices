@@ -12,12 +12,10 @@ public interface UserDao extends JpaRepository<User, Long> {
 
     public User findUserById(Long id);
 
-    // TODO problem: multiple entries with same values
+    // TODO problem: multiple entries with same values -- solved: nativeQuery, koristim from user jer follow tabela moze biti prazna a user ne
     @Modifying
     @Transactional
-    @Query(value = "INSERT INTO follow VALUES(:userId, :followId);", nativeQuery = true)
+    @Query(value = "INSERT INTO follow SELECT DISTINCT :userId, :followId FROM user WHERE NOT EXISTS(SELECT 1 FROM follow WHERE followers_id=:userId AND following_id=:followId);", nativeQuery = true)
     public Integer follow(Long userId, Long followId);
-
-
 
 }
