@@ -1,10 +1,12 @@
-package rs.edu.raf.msa.Social.service.impl;
+package rs.edu.raf.msa.demo.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import rs.edu.raf.msa.Social.dao.UserDao;
-import rs.edu.raf.msa.Social.domain.model.User;
-import rs.edu.raf.msa.Social.service.UserService;
+import rs.edu.raf.msa.demo.dao.UserDao;
+import rs.edu.raf.msa.demo.domain.model.User;
+import rs.edu.raf.msa.demo.service.UserService;
+
+import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -13,13 +15,7 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     public UserServiceImpl(UserDao userDao) {
-        super();
         this.userDao = userDao;
-    }
-
-    @Override
-    public User get(Long id) {
-        return userDao.findUserById(id);
     }
 
     @Override
@@ -28,17 +24,14 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Boolean delete(Long id) {
-        try {
-            userDao.deleteById(id);
-        } catch (Exception e) {
-            return false;
-        }
-        return true;
+    public User get(Long id) {
+        return userDao.findUserById(id);
     }
 
     @Override
-    public Integer follow(Long userId, Long followId) {
-        return userDao.follow(userId, followId);
+    public Boolean delete(Long id) {
+        userDao.deleteById(id);
+        return true;
     }
+
 }

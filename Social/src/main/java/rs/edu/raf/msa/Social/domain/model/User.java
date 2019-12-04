@@ -1,12 +1,11 @@
-package rs.edu.raf.msa.Social.domain.model;
+package rs.edu.raf.msa.demo.domain.model;
 
 import lombok.Data;
 
 import javax.persistence.*;
 import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.Collection;
 import java.util.List;
-import java.util.Set;
 
 @Data
 @Entity
@@ -20,17 +19,8 @@ public class User {
     @Column(name = "name")
     private String name;
 
-    // TODO Problem: Recursive calls for nested users
-    @ManyToMany(mappedBy = "following", fetch = FetchType.LAZY)
-    private Set<User> followers;
-
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name="follow")
-    private Set<User> following;
-
     public User() {
-        this.followers = new HashSet<>();
-        this.following = new HashSet<>();
+        super();
     }
 
     public User(String name) {
@@ -38,6 +28,14 @@ public class User {
         this.name = name;
     }
 
+    public User(Long id) {
+        this.id = id;
+    }
 
+    public User(Long id, String name) {
+        this();
+        this.id = id;
+        this.name = name;
+    }
 
 }

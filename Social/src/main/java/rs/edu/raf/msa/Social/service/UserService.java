@@ -1,6 +1,6 @@
-package rs.edu.raf.msa.Social.service;
+package rs.edu.raf.msa.demo.service;
 
-import rs.edu.raf.msa.Social.domain.model.User;
+import rs.edu.raf.msa.demo.domain.model.User;
 
 public interface UserService {
 
@@ -9,7 +9,5 @@ public interface UserService {
     public User save(String name);
 
     public Boolean delete(Long id);
-
-    public Integer follow(Long userId, Long followId);
 
 }

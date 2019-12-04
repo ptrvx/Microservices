@@ -1,12 +1,13 @@
-package rs.edu.raf.msa.Social.api;
+package rs.edu.raf.msa.demo.api;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
-import rs.edu.raf.msa.Social.domain.model.User;
-import rs.edu.raf.msa.Social.service.UserService;
+import rs.edu.raf.msa.demo.domain.model.User;
+import rs.edu.raf.msa.demo.service.UserService;
 
 @RestController
-@RequestMapping("user")
+@RequestMapping(value = "/user")
 public class UserApi {
 
     private UserService userService;
@@ -17,28 +18,24 @@ public class UserApi {
         this.userService = userService;
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/")
     public @ResponseBody
-    User get(@PathVariable  Long id) {
+    User get(@RequestParam Long id) {
         return userService.get(id);
     }
 
-    @PostMapping
+    @PostMapping("/save")
     public @ResponseBody
     User save(@RequestParam String name) {
         return userService.save(name);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/")
     public @ResponseBody
-    Boolean delete(@PathVariable Long id) {
+    Boolean delete(@RequestParam Long id) {
         return userService.delete(id);
     }
 
-    @PostMapping("/follow")
-    public @ResponseBody
-    Integer follow(@RequestParam Long userId, @RequestParam Long followId) {
-        return userService.follow(userId, followId);
-    }
+
 
 }
