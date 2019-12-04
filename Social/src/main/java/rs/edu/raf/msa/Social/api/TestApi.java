@@ -1,4 +1,4 @@
-package rs.edu.raf.msa.demo.api;
+package rs.edu.raf.msa.Social.api;
 
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,8 +1,8 @@
-package rs.edu.raf.msa.demo.dao;
+package rs.edu.raf.msa.Social.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import rs.edu.raf.msa.demo.domain.model.Comment;
+import rs.edu.raf.msa.Social.domain.model.Comment;
 
 import java.util.List;
 

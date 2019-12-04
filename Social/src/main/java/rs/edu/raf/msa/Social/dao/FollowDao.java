@@ -1,10 +1,8 @@
-package rs.edu.raf.msa.demo.dao;
+package rs.edu.raf.msa.Social.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import rs.edu.raf.msa.demo.domain.model.Follow;
-import rs.edu.raf.msa.demo.domain.model.User;
+import rs.edu.raf.msa.Social.domain.model.Follow;
 
-import java.util.Collection;
 import java.util.List;
 
 public interface FollowDao extends JpaRepository<Follow, Long> {

@@ -1,12 +1,12 @@
-package rs.edu.raf.msa.demo.service.impl;
+package rs.edu.raf.msa.Social.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import rs.edu.raf.msa.demo.dao.FollowDao;
-import rs.edu.raf.msa.demo.dao.UserDao;
-import rs.edu.raf.msa.demo.domain.model.Follow;
-import rs.edu.raf.msa.demo.domain.model.User;
-import rs.edu.raf.msa.demo.service.FollowService;
+import rs.edu.raf.msa.Social.dao.FollowDao;
+import rs.edu.raf.msa.Social.dao.UserDao;
+import rs.edu.raf.msa.Social.domain.model.Follow;
+import rs.edu.raf.msa.Social.domain.model.User;
+import rs.edu.raf.msa.Social.service.FollowService;
 
 import java.util.ArrayList;
 import java.util.List;

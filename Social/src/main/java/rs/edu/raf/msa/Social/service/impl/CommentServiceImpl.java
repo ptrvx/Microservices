@@ -1,12 +1,12 @@
-package rs.edu.raf.msa.demo.service.impl;
+package rs.edu.raf.msa.Social.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import rs.edu.raf.msa.demo.dao.CommentDao;
-import rs.edu.raf.msa.demo.domain.model.Comment;
-import rs.edu.raf.msa.demo.domain.model.Post;
-import rs.edu.raf.msa.demo.domain.model.User;
-import rs.edu.raf.msa.demo.service.CommentService;
+import rs.edu.raf.msa.Social.dao.CommentDao;
+import rs.edu.raf.msa.Social.domain.model.Comment;
+import rs.edu.raf.msa.Social.domain.model.Post;
+import rs.edu.raf.msa.Social.domain.model.User;
+import rs.edu.raf.msa.Social.service.CommentService;
 
 import java.util.List;
 

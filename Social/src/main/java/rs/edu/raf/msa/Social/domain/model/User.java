@@ -1,11 +1,8 @@
-package rs.edu.raf.msa.demo.domain.model;
+package rs.edu.raf.msa.Social.domain.model;
 
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
 
 @Data
 @Entity

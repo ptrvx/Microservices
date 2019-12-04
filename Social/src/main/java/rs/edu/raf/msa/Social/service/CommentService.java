@@ -1,6 +1,6 @@
-package rs.edu.raf.msa.demo.service;
+package rs.edu.raf.msa.Social.service;
 
-import rs.edu.raf.msa.demo.domain.model.Comment;
+import rs.edu.raf.msa.Social.domain.model.Comment;
 
 import java.util.List;
 

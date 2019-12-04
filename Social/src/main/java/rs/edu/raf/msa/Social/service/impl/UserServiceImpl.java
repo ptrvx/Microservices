@@ -1,12 +1,10 @@
-package rs.edu.raf.msa.demo.service.impl;
+package rs.edu.raf.msa.Social.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import rs.edu.raf.msa.demo.dao.UserDao;
-import rs.edu.raf.msa.demo.domain.model.User;
-import rs.edu.raf.msa.demo.service.UserService;
-
-import java.util.List;
+import rs.edu.raf.msa.Social.dao.UserDao;
+import rs.edu.raf.msa.Social.domain.model.User;
+import rs.edu.raf.msa.Social.service.UserService;
 
 @Service
 public class UserServiceImpl implements UserService {

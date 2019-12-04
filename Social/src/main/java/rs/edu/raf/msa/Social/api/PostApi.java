@@ -1,9 +1,9 @@
-package rs.edu.raf.msa.demo.api;
+package rs.edu.raf.msa.Social.api;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import rs.edu.raf.msa.demo.domain.model.Post;
-import rs.edu.raf.msa.demo.service.PostService;
+import rs.edu.raf.msa.Social.domain.model.Post;
+import rs.edu.raf.msa.Social.service.PostService;
 
 import java.util.List;
 

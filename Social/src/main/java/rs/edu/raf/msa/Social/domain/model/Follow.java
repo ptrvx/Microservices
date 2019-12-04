@@ -1,4 +1,4 @@
-package rs.edu.raf.msa.demo.domain.model;
+package rs.edu.raf.msa.Social.domain.model;
 
 import lombok.Data;
 
