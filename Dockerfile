@@ -1,11 +1,11 @@
 FROM maven:3.6-jdk-11 as builder
 WORKDIR /app
-COPY ./Zuul/ /app/
+COPY ./Social /app/
 RUN mvn clean install
 
-FROM openjdk:8
-COPY --from=builder /app/target/Zuul-0.0.1-SNAPSHOT.jar /
-RUN mv /Zuul-0.0.1-SNAPSHOT.jar /app.jar
+FROM openjdk:11
+COPY --from=builder /app/target/Social-0.0.1-SNAPSHOT.jar /
+RUN mv /Social-0.0.1-SNAPSHOT.jar /app.jar
 
 VOLUME /tmp
 ENV JAVA_OPTS=""
