@@ -11,7 +11,7 @@ pipeline {
 		}
 		stage('Docker') {
 			when {
-				branch 'demo'
+				branch 'testDeploy'
 			}
 			steps {
 				script {

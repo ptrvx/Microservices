@@ -4,8 +4,8 @@ COPY ./Social /app/
 RUN mvn clean install
 
 FROM openjdk:11
-COPY --from=builder /app/target/Social-0.0.1-SNAPSHOT.jar /
-RUN mv /Social-0.0.1-SNAPSHOT.jar /app.jar
+COPY --from=builder /app/target/social-0.0.1-SNAPSHOT.jar /
+RUN mv /social-0.0.1-SNAPSHOT.jar /app.jar
 
 VOLUME /tmp
 ENV JAVA_OPTS=""
