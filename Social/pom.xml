@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>rs.edu.raf.msa</groupId>
-	<artifactId>Social</artifactId>
+	<artifactId>social</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Social</name>
+	<name>social</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
